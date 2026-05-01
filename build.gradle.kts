@@ -24,4 +24,5 @@ kotlin {
 }
 
 formver {
+    conversionTargetsSelection("all_targets")
 }
