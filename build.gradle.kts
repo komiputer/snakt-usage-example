@@ -25,5 +25,7 @@ kotlin {
 
 formver {
     conversionTargetsSelection("all_targets")
-    checkUniqueness(true)
+    // checkUniqueness is not a real formver Gradle DSL method; the from-main
+    // published plugin only exposes logLevel/errorStyle/unsupportedFeatureBehaviour/
+    // conversionTargetsSelection/verificationTargetsSelection.
 }
