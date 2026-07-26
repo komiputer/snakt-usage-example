@@ -157,6 +157,52 @@ or object-literal declarations.** Annotating the enclosing function does not
 stop an enum class, a local `fun`, or an `object : I { … }` from being
 converted, so the escape hatch does not cover the cases that most need it.
 
+## Filed issues
+
+All against `komiputer/snakt`.
+
+Aborts compilation: lambda literals [#7], anonymous objects [#10].
+
+Unsupported, reported per declaration: callable references [#8], local
+functions and closures [#9], `throw` [#11], `do`/`while` [#12], `!!` [#13],
+destructuring [#14], indexed assignment [#15], vararg call arguments [#16],
+`Long` and `Float` constants [#17], string templates with a variable [#18],
+enum classes [#19], `object` and companion references [#20].
+
+Converts but does not verify: array `.size` non-negativity [#21],
+`loopInvariants` in `for` loops [#22], range membership [#23], `try`/`catch`
+result typing [#24], inner-class receivers [#25].
+
+Plugin behaviour: `NotImplementedError` aborting compilation [#3], errors
+hiding all verification warnings [#4], `assume_unreachable` losing its messages
+[#5], `@NeverConvert` scope [#6], uniqueness checker unreachable from Gradle
+[#26].
+
+[#3]: https://github.com/komiputer/snakt/issues/3
+[#4]: https://github.com/komiputer/snakt/issues/4
+[#5]: https://github.com/komiputer/snakt/issues/5
+[#6]: https://github.com/komiputer/snakt/issues/6
+[#7]: https://github.com/komiputer/snakt/issues/7
+[#8]: https://github.com/komiputer/snakt/issues/8
+[#9]: https://github.com/komiputer/snakt/issues/9
+[#10]: https://github.com/komiputer/snakt/issues/10
+[#11]: https://github.com/komiputer/snakt/issues/11
+[#12]: https://github.com/komiputer/snakt/issues/12
+[#13]: https://github.com/komiputer/snakt/issues/13
+[#14]: https://github.com/komiputer/snakt/issues/14
+[#15]: https://github.com/komiputer/snakt/issues/15
+[#16]: https://github.com/komiputer/snakt/issues/16
+[#17]: https://github.com/komiputer/snakt/issues/17
+[#18]: https://github.com/komiputer/snakt/issues/18
+[#19]: https://github.com/komiputer/snakt/issues/19
+[#20]: https://github.com/komiputer/snakt/issues/20
+[#21]: https://github.com/komiputer/snakt/issues/21
+[#22]: https://github.com/komiputer/snakt/issues/22
+[#23]: https://github.com/komiputer/snakt/issues/23
+[#24]: https://github.com/komiputer/snakt/issues/24
+[#25]: https://github.com/komiputer/snakt/issues/25
+[#26]: https://github.com/komiputer/snakt/issues/26
+
 ## Reproducing
 
     source ~/.sdkman/bin/sdkman-init.sh
