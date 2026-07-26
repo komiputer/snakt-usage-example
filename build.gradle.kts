@@ -25,5 +25,5 @@ kotlin {
 
 formver {
     conversionTargetsSelection("all_targets")
-    checkUniqueness(true)
+    unsupportedFeatureBehaviour("throw_exception")
 }
